@@ -1,0 +1,59 @@
+{
+    "name": "aaw-team/adserver",
+    "type": "typo3-cms-extension",
+    "description": "Ad server for TYPO3",
+    "keywords": ["advertisement", "banner", "tracking", "pixel"],
+    "homepage": "https://github.com/aaw-team/adserver",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Agentur am Wasser Team",
+            "email": "development@agenturamwasser.ch",
+            "homepage": "https://www.agenturamwasser.ch/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "typo3/cms-core": "^10.4.22"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.4",
+        "nimut/testing-framework": "^6.0"
+    },
+    "replace": {
+        "typo3-ter/adserver": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "AawTeam\\Adserver\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AawTeam\\Adserver\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "vendor-dir": "Build/vendor",
+        "bin-dir": "Build/bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "typo3/cms": {
+            "extension-key": "adserver",
+            "app-dir": "Build",
+            "web-dir": "Build/public"
+        }
+    },
+    "scripts": {
+        "fix-cgl": "./Build/bin/php-cs-fixer fix --rules='@DoctrineAnnotation,@PSR1,@PSR2,no_singleline_whitespace_before_semicolons,no_whitespace_in_blank_line,function_typehint_space,return_type_declaration' Classes",
+        "run-tests": "./Build/bin/phpunit -c Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml ./Tests"
+    },
+    "support": {
+        "source": "https://github.com/aaw-team/adserver",
+        "issues": "https://github.com/aaw-team/adserver/issues"
+    }
+}
