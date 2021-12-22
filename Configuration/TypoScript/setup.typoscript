@@ -1,0 +1,18 @@
+plugin.tx_adserver {
+    settings {
+    }
+    view{
+        layoutRootPaths {
+            0 = EXT:adserver/Resources/Private/Layouts/
+            10 = {$plugin.tx_adserver.view.layoutRootPath}
+        }
+        templateRootPaths {
+            0 = EXT:adserver/Resources/Private/Templates/
+            10 = {$plugin.tx_adserver.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:adserver/Resources/Private/Partials/
+            10 = {$plugin.tx_adserver.view.partialRootPath}
+        }
+    }
+}
