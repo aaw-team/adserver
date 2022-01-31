@@ -35,8 +35,8 @@
         }
     },
     "config": {
-        "vendor-dir": "Build/vendor",
-        "bin-dir": "Build/bin"
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
     },
     "extra": {
         "branch-alias": {
@@ -44,13 +44,13 @@
         },
         "typo3/cms": {
             "extension-key": "adserver",
-            "app-dir": "Build",
-            "web-dir": "Build/public"
+            "app-dir": ".Build",
+            "web-dir": ".Build/public"
         }
     },
     "scripts": {
-        "fix-cgl": "./Build/bin/php-cs-fixer fix --config=php-cs-fixer.php",
-        "run-tests": "./Build/bin/phpunit -c Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml ./Tests"
+        "fix-cgl": "./.Build/bin/php-cs-fixer fix --config=php-cs-fixer.php",
+        "run-tests": "./.Build/bin/phpunit -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml ./Tests"
     },
     "support": {
         "source": "https://github.com/aaw-team/adserver",
