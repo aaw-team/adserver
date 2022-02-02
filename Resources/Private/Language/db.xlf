@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+    <file source-language="en" datatype="plaintext" original="EXT:adserver/Resources/Private/Language/db.xlf" date="2022-02-02T15:58:Z" product-name="adserver">
+        <header/>
+        <body>
+            <!-- TCA -->
+            <!-- tx_adserver_domain_model_ad -->
+            <trans-unit id="tca.tx_adserver_domain_model_ad">
+                <source>Ad</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.identifier">
+                <source>Identifier</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.code">
+                <source>Code</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.code.default">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.hidden.formlabel">
+                <source>Ad visible</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.starttime">
+                <source>Starttime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_ad.endtime">
+                <source>Endtime</source>
+            </trans-unit>
+
+            <!-- tx_adserver_domain_model_campaign -->
+            <trans-unit id="tca.tx_adserver_domain_model_campaign">
+                <source>Campaign</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.identifier">
+                <source>Identifier</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.hidden.formlabel">
+                <source>Campaign visible</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.starttime">
+                <source>Starttime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.endtime">
+                <source>Endtime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.limit_to_pages">
+                <source>Limit to pages</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_campaign.tabs.output">
+                <source>Output (TYPO3)</source>
+            </trans-unit>
+
+            <!-- tx_adserver_domain_model_code -->
+            <trans-unit id="tca.tx_adserver_domain_model_code">
+                <source>Code</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.type.1">
+                <source>Tracking pixel</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.identifier">
+                <source>Identifier</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.hidden.formlabel">
+                <source>Code visible</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.starttime">
+                <source>Starttime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.endtime">
+                <source>Endtime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_code.source">
+                <source>Source</source>
+            </trans-unit>
+
+            <!-- tx_adserver_domain_model_place -->
+            <trans-unit id="tca.tx_adserver_domain_model_place">
+                <source>Place</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.identifier">
+                <source>Identifier</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.hidden.formlabel">
+                <source>Place visible</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.starttime">
+                <source>Starttime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_place.endtime">
+                <source>Endtime</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
