@@ -1,10 +1,11 @@
 # Ad server for TYPO3
 
-This extension provides a versatile for [TYPO3](https://typo3.org/).
+This extension provides a versatile advertisement server for
+[TYPO3](https://typo3.org/), as well as an ad client for the TYPO3 frontend.
 
 ---
 
-**Note: This project is currently under development!**
+**Note: This project is currently under initial development!**
 
 ---
 
