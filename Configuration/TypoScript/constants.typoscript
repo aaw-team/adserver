@@ -1,4 +1,7 @@
 plugin.tx_adserver {
+    settings {
+        adserverPageType = 2663
+    }
     view{
         layoutRootPath =
         templateRootPath =

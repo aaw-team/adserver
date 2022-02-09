@@ -1,5 +1,9 @@
+/**
+ * Main plugin configuration
+ */
 plugin.tx_adserver {
     settings {
+        adserverPageType = {$plugin.tx_adserver.settings.adserverPageType}
     }
     view{
         layoutRootPaths {
@@ -15,4 +19,20 @@ plugin.tx_adserver {
             10 = {$plugin.tx_adserver.view.partialRootPath}
         }
     }
+}
+
+/**
+ * AJAX page type configuration
+ */
+adserver = PAGE
+adserver {
+    typeNum = {$plugin.tx_adserver.settings.adserverPageType}
+    config {
+        // Do not send the 'Content-Type' HTTP header automatically. It will be sent through the application.
+        disableCharsetHeader = 1
+        disableAllHeaderCode = 1
+        debug = 0
+        no_cache = 1
+    }
+    10 = < tt_content.list.20.adserver_adserver
 }
