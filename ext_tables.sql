@@ -34,6 +34,28 @@ CREATE TABLE tx_adserver_domain_model_campaign_to_pages (
 ) COMMENT 'Note: m:n table is managed by TYPO3, no foreign key constraints possible';
 
 --
+-- Table structure for table 'tx_adserver_domain_model_channel'
+--
+CREATE TABLE tx_adserver_domain_model_channel (
+    title varchar(255) NOT NULL DEFAULT '',
+    identifier varchar(255) NOT NULL DEFAULT '',
+    campaigns int(11) unsigned NOT NULL DEFAULT 0,
+);
+
+--
+-- Table structure for table 'tx_adserver_domain_model_channel_to_campaign'
+--
+CREATE TABLE tx_adserver_domain_model_channel_to_campaign (
+    uid_local int(11) unsigned DEFAULT 0 NOT NULL,
+    uid_foreign int(11) unsigned DEFAULT 0 NOT NULL,
+    sorting int(11) unsigned DEFAULT 0 NOT NULL,
+    sorting_foreign int(11) unsigned DEFAULT 0 NOT NULL,
+
+    INDEX uid_local (uid_local),
+    INDEX uid_foreign (uid_foreign),
+) COMMENT 'Note: m:n table is managed by TYPO3, no foreign key constraints possible';
+
+--
 -- Table structure for table 'tx_adserver_domain_model_code'
 --
 CREATE TABLE tx_adserver_domain_model_code (

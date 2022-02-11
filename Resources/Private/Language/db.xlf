@@ -62,6 +62,32 @@
                 <source>Output (TYPO3)</source>
             </trans-unit>
 
+            <!-- tx_adserver_domain_model_channel -->
+            <trans-unit id="tca.tx_adserver_domain_model_channel">
+                <source>Channel</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.identifier">
+                <source>Identifier</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.hidden.formlabel">
+                <source>Channel visible</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.starttime">
+                <source>Starttime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.endtime">
+                <source>Endtime</source>
+            </trans-unit>
+            <trans-unit id="tca.tx_adserver_domain_model_channel.campaigns">
+                <source>Campaigns</source>
+            </trans-unit>
+
             <!-- tx_adserver_domain_model_code -->
             <trans-unit id="tca.tx_adserver_domain_model_code">
                 <source>Code</source>
