@@ -56,7 +56,7 @@ return [
                     ],
                 ],
                 'fallbackCharacter' => '-',
-                'eval' => 'uniqueInSite'
+                'eval' => 'unique'
             ],
         ],
         'hidden' => [

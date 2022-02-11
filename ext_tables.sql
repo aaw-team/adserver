@@ -40,6 +40,8 @@ CREATE TABLE tx_adserver_domain_model_channel (
     title varchar(255) NOT NULL DEFAULT '',
     identifier varchar(255) NOT NULL DEFAULT '',
     campaigns int(11) unsigned NOT NULL DEFAULT 0,
+
+    UNIQUE identifier (identifier),
 );
 
 --
