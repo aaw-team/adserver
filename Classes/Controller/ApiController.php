@@ -21,9 +21,9 @@ namespace AawTeam\Adserver\Controller;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * AdserverController
+ * ApiController
  */
-class AdserverController extends AbstractController
+class ApiController extends AbstractApiController
 {
     protected function indexAction(): ResponseInterface
     {

@@ -18,20 +18,20 @@ namespace AawTeam\Adserver\Tests\Unit\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use AawTeam\Adserver\Controller\AdserverController;
+use AawTeam\Adserver\Controller\ApiController;
 use Nimut\TestingFramework\TestCase\UnitTestCase;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * AdserverControllerTest
+ * ApiControllerTest
  */
-class AdserverControllerTest extends UnitTestCase
+class ApiControllerTest extends UnitTestCase
 {
     /**
      * @test
      */
     public function isActionController(): void
     {
-        self::assertInstanceOf(ActionController::class, new AdserverController());
+        self::assertInstanceOf(ActionController::class, new ApiController());
     }
 }

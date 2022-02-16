@@ -18,7 +18,7 @@
 defined('TYPO3') or defined('TYPO3_MODE') or die();
 
 $controllerActions = [
-    \AawTeam\Adserver\Controller\AdserverController::class => 'index',
+    \AawTeam\Adserver\Controller\ApiController::class => 'index',
 ];
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'Adserver',
