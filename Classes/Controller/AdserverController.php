@@ -34,6 +34,6 @@ class AdserverController extends AbstractController
             ->withData($data)
             ->withNotification('Welcome, this is adserver speaking, powered by TYPO3');
 
-        return $this->legacyProcessAndReturnResponse($response);
+        return $this->processAndReturnResponse($response);
     }
 }
