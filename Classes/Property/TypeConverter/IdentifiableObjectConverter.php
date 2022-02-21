@@ -45,7 +45,8 @@ class IdentifiableObjectConverter extends AbstractTypeConverter
 
     /**
      * Choose a priority higher than
-     * \TYPO3\CMS\Extbase\Property\TypeConverter\ObjectConverter
+     * \TYPO3\CMS\Extbase\Property\TypeConverter\PersistentObjectConverter but
+     * lower than \TYPO3\CMS\Extbase\Property\TypeConverter\ObjectConverter
      *
      * @var int
      */

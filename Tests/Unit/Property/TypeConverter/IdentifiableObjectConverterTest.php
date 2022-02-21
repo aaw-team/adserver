@@ -20,6 +20,8 @@ namespace AawTeam\Adserver\Tests\Unit\Domain\Model;
 
 use AawTeam\Adserver\Property\TypeConverter\IdentifiableObjectConverter;
 use Nimut\TestingFramework\TestCase\UnitTestCase;
+use TYPO3\CMS\Extbase\Property\TypeConverter\ObjectConverter;
+use TYPO3\CMS\Extbase\Property\TypeConverter\PersistentObjectConverter;
 use TYPO3\CMS\Extbase\Property\TypeConverterInterface;
 
 /**
@@ -30,8 +32,20 @@ class IdentifiableObjectConverterTest extends UnitTestCase
     /**
      * @test
      */
-    public function isTypeConverterInterface()
+    public function isTypeConverterInterface(): void
     {
         self::assertContains(TypeConverterInterface::class, class_implements(IdentifiableObjectConverter::class));
+    }
+
+    /**
+     * @test
+     */
+    public function priorityIsHigherThanExtbasePersistentObjectConverter(): void
+    {
+        $persistentObjectConverter = new PersistentObjectConverter();
+        $objectConverter = new ObjectConverter();
+        $subject = new IdentifiableObjectConverter();
+        self::assertGreaterThan($objectConverter->getPriority(), $subject->getPriority());
+        self::assertLessThan($persistentObjectConverter->getPriority(), $subject->getPriority());
     }
 }
