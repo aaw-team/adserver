@@ -47,7 +47,6 @@ abstract class AbstractIdentifiableManagerRepository extends Repository implemen
     public function createQueryFilteringByIdentifiableString(string $identifier): QueryInterface
     {
         $query = $this->createQuery();
-        $query->getQuerySettings()->setRespectStoragePage(false);
         return $query->matching(
             $query->equals('identifier', $identifier)
         );
