@@ -103,10 +103,10 @@ class AjaxResponseTest extends UnitTestCase
      * @param array $errors
      * @param array $expectedStructure
      * @test
-     * @dataProvider responseBodyContainsNeededStructureAndDataDataProvider
+     * @dataProvider responseBodyContentsDataProvider
      * @depends responseBodyContainsValidJson
      */
-    public function responseBodyContainsNeededStructureAndData(?array $data, ?array $notifications, ?array $errors, array $expectedStructure): void
+    public function responseBodyContents(?array $data, ?array $notifications, ?array $errors, array $expectedStructure): void
     {
         $subject = $this->subject;
 
@@ -127,24 +127,20 @@ class AjaxResponseTest extends UnitTestCase
         self::assertSame($expectedStructure, $decodedResponseBody);
     }
 
-    public function responseBodyContainsNeededStructureAndDataDataProvider(): array
+    public function responseBodyContentsDataProvider(): array
     {
         return [
-            'empty-skeleton' => [
+            'empty-response' => [
                 null,
                 null,
                 null,
-                [
-                    'notifications' => [],
-                    'data' => [],
-                ]
+                []
             ],
             'only-data' => [
                 ['answer' => 42],
                 null,
                 null,
                 [
-                    'notifications' => [],
                     'data' => ['answer' => 42],
                 ]
             ],
@@ -154,7 +150,6 @@ class AjaxResponseTest extends UnitTestCase
                 null,
                 [
                     'notifications' => ['Hello world!'],
-                    'data' => [],
                 ]
             ],
             'data-and-notification' => [
@@ -171,8 +166,45 @@ class AjaxResponseTest extends UnitTestCase
                 null,
                 [[0 => 1, 1 => 'Error message']],
                 [
-                    'notifications' => [],
-                    'data' => [],
+                    'errors' => [
+                        [
+                            'code' => 1,
+                            'message' => 'Error message',
+                        ]
+                    ],
+                ]
+            ],
+            'error-and-data' => [
+                ['answer' => 42],
+                null,
+                [[0 => 1, 1 => 'Error message']],
+                [
+                    'errors' => [
+                        [
+                            'code' => 1,
+                            'message' => 'Error message',
+                        ]
+                    ],
+                ]
+            ],
+            'error-and-notification' => [
+                null,
+                ['Hello world!'],
+                [[0 => 1, 1 => 'Error message']],
+                [
+                    'errors' => [
+                        [
+                            'code' => 1,
+                            'message' => 'Error message',
+                        ]
+                    ],
+                ]
+            ],
+            'error-and-data-and-notification' => [
+                ['answer' => 42],
+                ['Hello world!'],
+                [[0 => 1, 1 => 'Error message']],
+                [
                     'errors' => [
                         [
                             'code' => 1,
@@ -182,6 +214,14 @@ class AjaxResponseTest extends UnitTestCase
                 ]
             ],
         ];
+    }
+
+    /**
+     * @test
+     */
+    public function emptyResponseContainsEmptyJsonObject(): void
+    {
+        self::assertEquals('{}', (string)$this->subject->getBody());
     }
 
     /**

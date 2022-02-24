@@ -139,13 +139,19 @@ class AjaxResponse extends Response
 
     private function createEncodedJsonSkeleton(): string
     {
-        $skeleton = [
-            'notifications' => $this->notifications,
-            'data' => $this->data,
-        ];
+        $skeleton = [];
+        // If there are errors, include only them
         if (!empty($this->errors)) {
             $skeleton['errors'] = $this->errors;
+        } else {
+            if (!empty($this->notifications)) {
+                $skeleton['notifications'] = $this->notifications;
+            }
+            if (!empty($this->data)) {
+                $skeleton['data'] = $this->data;
+            }
         }
-        return json_encode($skeleton);
+
+        return empty($skeleton) ? '{}' : json_encode($skeleton);
     }
 }
