@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace AawTeam\Adserver\Domain\Repository;
+namespace AawTeam\Adserver\Api;
 
 /*
  * Copyright by Agentur am Wasser | Maeder & Partner AG
@@ -18,11 +18,12 @@ namespace AawTeam\Adserver\Domain\Repository;
  * The TYPO3 project - inspiring people to share!
  */
 
-use AawTeam\Adserver\Persistence\AbstractRepository;
+use AawTeam\Adserver\Domain\Model\Channel;
 
 /**
- * PlacementRepository
+ * PlacementFinderInterface
  */
-class PlacementRepository extends AbstractRepository
+interface PlacementFinderInterface
 {
+    public function findByChannel(Channel $channel): \Traversable;
 }

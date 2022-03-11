@@ -20,12 +20,11 @@ namespace AawTeam\Adserver\Persistence;
 
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
-use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
  * AbstractIdentifiableManagerRepository
  */
-abstract class AbstractIdentifiableManagerRepository extends Repository implements IdentifiableManagerInterface
+abstract class AbstractIdentifiableManagerRepository extends AbstractRepository implements IdentifiableManagerInterface
 {
     public function findByIdentifiableString(string $identifier, bool $returnRawQueryResult = false)
     {

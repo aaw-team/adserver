@@ -18,7 +18,7 @@
 defined('TYPO3') or defined('TYPO3_MODE') or die();
 
 $controllerActions = [
-    \AawTeam\Adserver\Controller\ApiController::class => 'index',
+    \AawTeam\Adserver\Controller\ApiController::class => 'index, setup',
 ];
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'Adserver',
@@ -26,3 +26,8 @@ $controllerActions = [
     $controllerActions,
     $controllerActions
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['adserver_setup'] = [
+    'backend' => \TYPO3\CMS\Core\Cache\Backend\Typo3DatabaseBackend::class,
+    'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
+];

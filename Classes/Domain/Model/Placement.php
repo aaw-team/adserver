@@ -25,4 +25,48 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 class Placement extends AbstractEntity
 {
+    /**
+     * @var Ad
+     */
+    protected $ad;
+
+    /**
+     * @var Campaign
+     */
+    protected $campaign;
+
+    /**
+     * @var Place
+     */
+    protected $place;
+
+    public function getAd(): Ad
+    {
+        return $this->ad;
+    }
+
+    public function setAd(Ad $ad)
+    {
+        $this->ad = $ad;
+    }
+
+    public function getCampaign(): Campaign
+    {
+        return $this->campaign;
+    }
+
+    public function setCampaign(Campaign $campaign)
+    {
+        $this->campaign = $campaign;
+    }
+
+    public function getPlace(): Place
+    {
+        return $this->place;
+    }
+
+    public function setPlace(Place $place)
+    {
+        $this->place = $place;
+    }
 }

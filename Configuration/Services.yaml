@@ -7,3 +7,11 @@ services:
   AawTeam\Adserver\:
     resource: '../Classes/*'
 
+  AawTeam\Adserver\Api\DataFinder:
+    arguments:
+      $cache: '@cache.adserver_setup'
+
+  cache.adserver_setup:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['adserver_setup']

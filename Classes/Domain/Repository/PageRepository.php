@@ -18,11 +18,11 @@ namespace AawTeam\Adserver\Domain\Repository;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Extbase\Persistence\Repository;
+use AawTeam\Adserver\Persistence\AbstractRepository;
 
 /**
  * PageRepository
  */
-class PageRepository extends Repository
+class PageRepository extends AbstractRepository
 {
 }
